@@ -7,15 +7,15 @@ import re
 pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'  # Update this path if needed
 
 # Load YOLO model
-model = YOLO('/kaggle/working/Automatic-Toll-Collection/best.pt')
+model = YOLO('best.pt')
 
 # Load video
-video_path = "/kaggle/working/Automatic-Toll-Collection/demo.mp4"
+video_path = "demo.mp4"
 cap = cv2.VideoCapture(video_path)
 
 # Define codec and create VideoWriter object to save output video
 fourcc = cv2.VideoWriter_fourcc(*'XVID')
-output_path = '/kaggle/working/Automatic-Toll-Collection/output.avi'
+output_path = 'demo-output.avi'
 out = cv2.VideoWriter(output_path, fourcc, 20.0, (int(cap.get(3)), int(cap.get(4))))
 
 license_plates = []
