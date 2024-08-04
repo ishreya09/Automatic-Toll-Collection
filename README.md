@@ -1,6 +1,12 @@
 # Automatic-Toll-Collection
 
+YOLOv8 (You Only Look Once, version 8) is designed for real-time object detection. It processes images and videos at high speeds, making it ideal for applications requiring real-time detection, such as automatic toll collection.
 
+The model architecture is optimized for fast inference, allowing it to handle high frame rates without significant performance drops.
+
+YOLOv8 leverages transfer learning from large-scale datasets, improving detection performance even with smaller, specific datasets like license plate images.
+
+Neck and Head Enhancements: The neck and head of the model are designed to improve the detection of small and densely packed objects, such as license plates in a busy traffic scenario.
 
 ### **Training and Validation Losses:**
 - **Box Loss** (`train/box_loss`, `val/box_loss`): Measures the error in bounding box predictions. The training box loss starts at 1.1072 and decreases to 0.53536 by epoch 50. Validation box loss shows a similar trend, starting at 1.0939 and decreasing to 0.68965 by epoch 50. This consistent decrease indicates that the model is improving in predicting bounding box coordinates.
@@ -26,6 +32,12 @@
 2. **Performance:** The precision, recall, mAP50, and mAP50-95 metrics show improvement over epochs, signifying enhanced detection performance.
 3. **Stability:** The decreasing learning rate helps in fine-tuning and achieving stable training towards the end.
 
+
+## Results:
+- The YOLO model achieved high accuracy in detecting license plates in video frames.
+- The OCR tool, coupled with preprocessing and post-processing steps, provided reliable text recognition for the detected plates.
+- The output video demonstrated effective detection and recognition, with bounding boxes and text displayed for each license plate.
+- A cleaned and filtered list of unique license plate numbers was generated, ensuring high data correctness.
 
 
 ### References
